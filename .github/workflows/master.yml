@@ -18,7 +18,7 @@ jobs:
       - name: npm install
         uses: bahmutov/npm-install@v1
 
-      - name: run lin
+      - name: run lint
         run: npm run lint
 
       - name: run tests
