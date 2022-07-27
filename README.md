@@ -1,5 +1,5 @@
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/stackblogger/link-meta-extractor/CI/master?style=flat-square&logo=github&color=success)
-![npm](https://img.shields.io/npm/v/meta-fetcher?style=flat-square&color=success&logo=npm)
+[![npm](https://badge.fury.io/js/link-meta-extractor.svg)](https://badge.fury.io/js/link-meta-extractor)
 
 # link-metadata-extractor
 
