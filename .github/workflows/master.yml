@@ -7,17 +7,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v2
 
         uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
 
         uses: bahmutov/npm-install@v1
 
-        name: Running Lint
+      - name: Running Lint
         run: npm run lint
 
-        name: Running Test
+      - name: Running Test
         run: npm run test --ci --coverage --maxWorkers=2
