@@ -7,19 +7,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+        name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node ${{ matrix.node }}
         uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
 
-      - name: Install deps and build (with cache)
         uses: bahmutov/npm-install@v1
 
-      - name: Lint
+        name: Running Lint
         run: npm run lint
 
-      - name: Test
+        name: Running Test
         run: npm run test --ci --coverage --maxWorkers=2
