@@ -21,13 +21,13 @@ describe('LinkMetaExtractor-Test', () => {
     ).then((metaInformatin) => {
       expect(metaInformatin).toHaveProperty('title');
       expect(metaInformatin).toHaveProperty('description');
-      expect(metaInformatin.extraFields).toHaveProperty(
+      expect(metaInformatin.additional).toHaveProperty(
         normalizeName('twitter:site')
       );
-      expect(metaInformatin.extraFields).toHaveProperty(
+      expect(metaInformatin.additional).toHaveProperty(
         normalizeName('twitter:card')
       );
-      expect(metaInformatin.extraFields).toHaveProperty('robots');
+      expect(metaInformatin.additional).toHaveProperty('robots');
       expect(metaInformatin).toMatchObject<MetadataInformation>(metaInformatin);
       done();
     });

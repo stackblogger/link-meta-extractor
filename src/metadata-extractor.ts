@@ -5,7 +5,7 @@ import { DynamicKeys, MetadataInformation } from './metadata';
 
 export async function extractMetadata(
   url: string,
-  ...metaFields: string[]
+  ...additionalFields: string[]
 ): Promise<MetadataInformation> {
   try {
     const cleanedUri = url.trim();
@@ -34,8 +34,15 @@ export async function extractMetadata(
       wordpressVersion
     };
 
-    metaResponse.extraFields = readExtraFields(head, ...metaFields);
+    if (additionalFields.length > 0) {
+      metaResponse.additional = readExtraFields(head, ...additionalFields);
+    }
 
+    Object.keys(metaResponse).forEach((key) => {
+      if (!metaResponse[key as keyof MetadataInformation]) {
+        delete metaResponse[key as keyof MetadataInformation];
+      }
+    });
     return metaResponse;
   } catch (ex) {
     throw ex;

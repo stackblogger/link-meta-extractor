@@ -5,7 +5,7 @@ export interface MetadataInformation {
   color?: string;
   isItWordpress?: boolean;
   wordpressVersion?: string;
-  extraFields?: DynamicKeys;
+  additional?: DynamicKeys;
 }
 
 export interface DynamicKeys {
