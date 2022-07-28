@@ -13,7 +13,7 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: latest
 
       - name: npm install
         uses: bahmutov/npm-install@v1
