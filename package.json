@@ -1,6 +1,6 @@
 {
   "name": "link-meta-extractor",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Extract metadata information from any http/https url. Simply pass a url string to the function and wait for the metadata results.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

@@ -1,5 +1,5 @@
 export function normalizeName(field: string): string {
-  return camelize(field.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' '));
+  return camelize(field.replace(/[&\/\\#,+()$~%.'":_*?<>{}]/g, ' '));
 }
 
 function camelize(str: string) {

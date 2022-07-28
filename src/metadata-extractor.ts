@@ -35,6 +35,9 @@ export async function extractMetadata(
     };
 
     if (additionalFields.length > 0) {
+      additionalFields = additionalFields.map((ad) =>
+        ad.indexOf('og:') > -1 ? ad.substring(3) : ad
+      );
       metaResponse.additional = readExtraFields(head, ...additionalFields);
     }
 
