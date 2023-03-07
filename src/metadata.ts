@@ -1,3 +1,7 @@
+export interface DynamicKeys {
+  [key: string]: string;
+}
+
 export interface MetadataInformation {
   title: string;
   description: string;
@@ -6,8 +10,4 @@ export interface MetadataInformation {
   isItWordpress?: boolean;
   wordpressVersion?: string;
   additional?: DynamicKeys;
-}
-
-export interface DynamicKeys {
-  [key: string]: string;
 }
