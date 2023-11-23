@@ -4,7 +4,7 @@ import { extractMetadata } from '../src';
 
 describe('LinkMetaExtractor-Test', () => {
   it('should contain the metadata information for the provided url', (done) => {
-    extractMetadata('https://stackblogger.com').then((metaInformatin) => {
+    extractMetadata('https://tecadmin.net').then((metaInformatin) => {
       expect(metaInformatin).toHaveProperty('title');
       expect(metaInformatin).toHaveProperty('description');
       expect(metaInformatin).toMatchObject<MetadataInformation>(metaInformatin);
@@ -14,7 +14,7 @@ describe('LinkMetaExtractor-Test', () => {
 
   it('should contain the extra metadata fields for the provided url', (done) => {
     extractMetadata(
-      'https://stackblogger.com',
+      'https://tecadmin.net',
       'twitter:site',
       'twitter:card',
       'robots'

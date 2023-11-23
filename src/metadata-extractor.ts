@@ -3,6 +3,16 @@ import fetch from 'node-fetch';
 import { normalizeName } from './helper';
 import { DynamicKeys, MetadataInformation } from './metadata';
 
+/**
+ * Extract Metadata from any HTTP/HTTPS Web URL.
+ * Simply pass the url in the function and get the result in JSON Object.
+ * Get the additional metadata properties extracted from the website,
+ * pass the properties in the additional fields param as REST Operator.
+ * 
+ * @param url website url from where you want to extract metadata
+ * @param additionalFields extra field names that need to be extracted
+ * @returns {MetadataInformation} metadata object with standard and extra fields (if provided)
+ */
 export async function extractMetadata(
   url: string,
   ...additionalFields: string[]
