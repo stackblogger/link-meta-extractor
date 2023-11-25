@@ -1,6 +1,6 @@
 {
   "name": "link-meta-extractor",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "Link Meta Extractor. Extract metadata information from any http/https url. Simply pass a url string to the function and wait for the metadata results.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -43,7 +43,7 @@
   "bugs": {
     "url": "https://github.com/stackblogger/link-meta-extractor/issues"
   },
-  "homepage": "https://github.com/stackblogger/link-meta-extractor#readme",
+  "homepage": "https://stackblogger.com",
   "devDependencies": {
     "@types/jest": "^28.1.6",
     "@types/node-fetch": "^2.6.2",
